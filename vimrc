@@ -40,6 +40,7 @@ noremap  <C-l>  :ts <C-R><C-W><CR>
 noremap  \ /\c
 
 "autocomplete options
+set ignorecase "ignore case sensitivity while searching symbols
 set completeopt=longest,menuone
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
@@ -48,3 +49,9 @@ inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
 inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
   \ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
 
+
+"Change split sizes
+map <C-Right> :vertical resize +2<CR>
+map <C-Left> :vertical resize -2<CR>
+map <C-Up> :res +2<CR>
+map <C-Down> :res -2<CR>
